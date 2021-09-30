@@ -16,6 +16,8 @@
 
         echo 'Paginação de 10 em 10 linhas!! 🙅‍♀️VAPO🙅‍♂️  🔥🚀forget🚀';
 
+#define os valores da array 
+
         $pagina = $_GET["pagina"];
         $valor =1;
         $matriz = array();
@@ -25,6 +27,8 @@
                     $valor++;
                     }
             }
+
+#mostra os valores da array 
 
         echo ('<table>');
 
