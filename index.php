@@ -1,10 +1,10 @@
 
 <?php
-
-    $pagina = $_GET["pagina"];
+    session_start();
+    $pagina = $_SESSION["pagina"];
     $matriz = array();
 
-    if ($pagina == 0) {
+    if ($pagina == 1) {
         echo 'Paginação !! 🙅‍♀️VAPO🙅‍♂️  🔥🚀forget🚀';
         echo '<br/><br/>';
     }
