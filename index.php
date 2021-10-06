@@ -1,55 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <?php
 
-        #echo "Pagina: ".$_GET["pagina"]."<br>";
-        #echo "Cor: ".$_GET["cor"]."<br>";
-        #echo "Tamanho".$_GET["tamanho"]."<br>";
+<?php
 
+    $pagina = $_GET["pagina"];
+    $matriz = array();
 
-        echo 'Paginação de 10 em 10 linhas!! 🙅‍♀️VAPO🙅‍♂️  🔥🚀forget🚀';
+    if ($pagina == 0) {
+        echo 'Paginação !! 🙅‍♀️VAPO🙅‍♂️  🔥🚀forget🚀';
+        echo '<br/><br/>';
+    }
 
 #define os valores da array 
 
-        $pagina = $_GET["pagina"];
-        $valor =1;
-        $matriz = array();
-            for ($i = 0; $i < 70; $i++) { 
+    for ($i = 0; $i < 70; $i++) { 
+        for ($j = 0; $j < 5; $j++) { 
+            $matriz[$i][$j] = rand(0,100);
+            }
+    }
+
+#mostra os valores da array s
+
+    echo ('<table>');
+
+        for ($i = $pagina*10; $i < ($pagina*10)+9; $i++) { 
+            echo ('<tr>');
                 for ($j = 0; $j < 5; $j++) { 
-                    $matriz[$i][$j] = $valor;
-                    $valor++;
-                    }
-            }
+                    echo ('<td>');
+                    echo ($matriz[$i][$j]);
+                    echo ('</td>');
+                }
+            echo ('</tr>');
+        }
 
-#mostra os valores da array 
+    echo ('</table>');
 
-        echo ('<table>');
+    #links
 
-            for ($i = $pagina*10; $i < ($pagina*10)+9; $i++) { 
-                echo ('<tr>');
-                    for ($j = 0; $j < 5; $j++) { 
-                        echo ('<td>');
-                        echo ($matriz[$i][$j]);
-                        echo ('</td>');
-                    }
-                echo ('</tr>');
-            }
-    
-        echo ('</table>');
-
-
+    for ($i = 1; $i <= 10; $i++) {
+        echo "<a href=\"?pagina={$i}\">{$i}</a> ";
+    }
 
 
     
 ?>
-
-   
-</body>
-</html>
