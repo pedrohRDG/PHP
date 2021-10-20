@@ -9,7 +9,7 @@
   
 ?>
 
-<a href="script2.php">teste</a>
+<a href="sessoes2.php">teste</a>
 
 <hr>
 
