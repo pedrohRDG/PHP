@@ -3,7 +3,24 @@
         session_start();
     }
 
+    include('db.php');
     include('protect.php');
+
+    if (isset($_POST['nomeproduto']) || isset($_POST['marcaproduto']) || isset($_POST['quantidadeproduto']) || isset($_POST['quantidadeproduto']) || isset($_POST['valorproduto'])){
+ 
+        $nomeproduto = $_POST['nomeproduto'];
+        $marcaproduto = $_POST['marcaproduto'];
+        $quantidadeproduto = $_POST['quantidadeproduto'];
+        $valorproduto = $_POST['valorproduto'];
+        if 
+        $valorestoque = $valorproduto*$quantidadeproduto;
+
+        $sql_code = "INSERT INTO produtos (nomeproduto,marcaproduto,quantidadeproduto,valorproduto,valorestoque) 
+        VALUES ('$nomeproduto','$marcaproduto','$quantidadeproduto','$valorproduto','$valorestoque')";
+
+        mysqli_query($mysqli,$sql_code);
+   }
+
 ?>
 
 <!DOCTYPE html>
@@ -15,8 +32,29 @@
     <title>painel</title>
 </head>
 <body>
-    salve <?php echo $_SESSION['nome'];?>
-
+    <hr/>
+    <h1>Insira o produto aqui</h1>    
+    <form action="" method="POST">
+        <p>
+            <label>Nome do produto</label>
+            <input type="text" name="nomeproduto">
+        </p>
+        <p>
+            <label>Valor do produto</label>
+            <input type="number" step="0.010" name="valorproduto">
+        </p>
+        <p>
+            <label>Marca do produto</label>
+            <input type="text" name="marcaproduto">
+        </p>
+        <p>
+            <label>Quantidade de produto</label>
+            <input type="number" name="quantidadeproduto">
+        </p>
+        <p>
+            <button type="submit">Entrar</button> 
+        </p>
+    </form>
     <p>
         <a href="logout.php">Sair</a>
     </p>
