@@ -12,7 +12,15 @@
 
         $query = "SELECT * FROM produtos";
         $result = mysqli_query($mysqli, $query);
-        echo "<table border>"; 
+        echo "<table border>";
+        echo "<tr>";
+        echo "<td>ID</td>";
+        echo "<td>Nome</td>";
+        echo "<td>Valor</td>";
+        echo "<td>Quantidade</td>";
+        echo "<td>Valor total</td>";
+        echo "<td>Marca</td>";
+        echo "</tr>"; 
             while($fetch = mysqli_fetch_row($result)){
                 echo "<tr>";
                 foreach ($fetch as $value) {
@@ -34,7 +42,15 @@
 
         $query = "SELECT * FROM produtos WHERE $campobusca = '$valorbusca' ";
         $result = mysqli_query($mysqli, $query);
-        echo "<table border>"; 
+        echo "<table border>";
+        echo "<tr>";
+        echo "<td>ID</td>";
+        echo "<td>Nome</td>";
+        echo "<td>Valor</td>";
+        echo "<td>Quantidade</td>";
+        echo "<td>Valor total</td>";
+        echo "<td>Marca</td>";
+        echo "</tr>";
         while($fetch = mysqli_fetch_row($result)){
             echo "<tr>";
             foreach ($fetch as $value) {
