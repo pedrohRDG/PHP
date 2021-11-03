@@ -13,11 +13,15 @@
         $query = "SELECT * FROM produtos";
         $result = mysqli_query($mysqli, $query);
             while($fetch = mysqli_fetch_row($result)){
-                echo "<p>"; 
+                echo "<table border>"; 
+                echo "<tr>";
                 foreach ($fetch as $value) {
-                echo $value . " - ";
+                echo "<td>";   
+                echo $value;
+                echo "</td>";
                 }
-            echo "</p>";
+            echo "</tr>";
+            echo "</table>";
             }
 }
     else{
@@ -28,11 +32,15 @@
         $query = "SELECT * FROM produtos WHERE $campobusca = '$valorbusca' ";
         $result = mysqli_query($mysqli, $query);
             while($fetch = mysqli_fetch_row($result)){
-                echo "<p>"; 
+                echo "<table border>"; 
+                echo "<tr>";
                 foreach ($fetch as $value) {
-                echo $value . " - ";
+                echo "<td>"; 
+                echo $value;
+                echo "</td>"; 
                 }
-            echo "</p>";
+                echo "</tr>";
+                echo "</table>";
             }
 
 
