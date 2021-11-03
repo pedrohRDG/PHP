@@ -12,36 +12,40 @@
 
         $query = "SELECT * FROM produtos";
         $result = mysqli_query($mysqli, $query);
+        echo "<table border>"; 
             while($fetch = mysqli_fetch_row($result)){
-                echo "<table border>"; 
                 echo "<tr>";
                 foreach ($fetch as $value) {
-                echo "<td>";   
-                echo $value;
-                echo "</td>";
+                    echo "<td>";   
+                    echo $value;
+                    echo "</td>";
                 }
-            echo "</tr>";
-            echo "</table>";
+                echo "</tr>";
             }
+            echo "</table>";
 }
+
     else{
 
         $campobusca = $_POST['campobusca'];
         $valorbusca = $_POST['valorbusca'];
 
+      
+
         $query = "SELECT * FROM produtos WHERE $campobusca = '$valorbusca' ";
         $result = mysqli_query($mysqli, $query);
-            while($fetch = mysqli_fetch_row($result)){
-                echo "<table border>"; 
-                echo "<tr>";
-                foreach ($fetch as $value) {
+        echo "<table border>"; 
+        while($fetch = mysqli_fetch_row($result)){
+            echo "<tr>";
+            foreach ($fetch as $value) {
                 echo "<td>"; 
                 echo $value;
                 echo "</td>"; 
-                }
-                echo "</tr>";
-                echo "</table>";
             }
+            echo "</tr>";     
+        }
+        
+        echo "</table>";
 
 
 } 
