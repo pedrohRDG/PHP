@@ -19,7 +19,7 @@
 </p>
 
 <p>
-    <a href="alterar.php">alterar</a>
+    <a href="alterar.php">Alterar</a>
 </p>
 
 <p>

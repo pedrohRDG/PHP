@@ -9,21 +9,24 @@
 
 
     if ( !isset( $_POST ) || empty( $_POST ) ) {
+
+        echo "Preencha as informações abaixo para alterar o produto.";
+
+    }
+    else{
         $campoalterado = $_POST['campoalterado'];
-        $valorbusca = $_POST['valorbusca'];
+        $produtoalterado = $_POST['produtoalterado'];
+        $valoraalterar = $_POST['valoraalterar'];
 
       
-        $query = "UPDATE produtos SET $campoalterado = '$valoraalterar' WHERE id = '$produtoalterado' ";
+        $query = "UPDATE produtos 
+                     SET $campoalterado = '$valoraalterar' 
+                   WHERE id = '$produtoalterado' ";
+
         $result = mysqli_query($mysqli, $query);
-
-    else{
-
-} 
-
-
+    }
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,15 +41,25 @@
     <h1>Alterar</h1>    
     <form action="" method="POST">
         <p>
-            <label>valor a alterar</label>
+            <label>Codigo do produto a alterar</label>
+            <input type="text" name="produtoalterado">
+        </p>
 
+        <p>
+            <label>valor a alterar</label>
+            <select name="campoalterado">
+                <option value="nomeproduto">Nome do produto</option>
+                <option value="marcaproduto">Marca do produto</option>
+                <option value="valorproduto">Valordo produto</option>
+                <option value="quantidadeproduto">Quantidade</option>
+            </select>
+        </p>
+
+        <p>
+            <label>Alterar para</label>
+            <input type="text" name="valoraalterar">
         </p>
         
-        <p>
-            <label>produto alterado</label>
-            <input type="text" name="valorbusca">
-        </p>
-
         <p>
             <button type="submit">Entrar</button> 
         </p>
