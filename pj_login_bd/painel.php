@@ -23,6 +23,10 @@
 </p>
 
 <p>
+    <a href="excluir.php">Excluir</a>
+</p>
+
+<p>
     <a href="logout.php">Sair</a>
 </p>
 

@@ -10,22 +10,18 @@
 
     if ( !isset( $_POST ) || empty( $_POST ) ) {
 
-        echo "Preencha as informações abaixo para alterar o produto.";
+        echo "Preencha as informações abaixo para excluir o produto.";
 
     }
     else{
-        $campoalterado = $_POST['campoalterado'];
-        $produtoalterado = $_POST['produtoalterado'];
-        $valoraalterar = $_POST['valoraalterar'];
+        $campobusca = $_POST['campobusca'];
+        $valorbusca = $_POST['valorbusca'];
 
       
-        $query = "UPDATE produtos 
-                     SET $campoalterado = '$valoraalterar' 
-                   WHERE id = '$produtoalterado' ";
+        $query = "DELETE FROM produtos WHERE  $campobusca = '$valorbusca' ";
 
         $result = mysqli_query($mysqli, $query);
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -34,32 +30,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alterar</title>
+    <title>Document</title>
 </head>
 <body>
     <hr/>
-    <h1>Alterar</h1>    
+    <h1>Excluir</h1>    
     <form action="" method="POST">
         <p>
-            <label>Codigo do produto a alterar</label>
-            <input type="text" name="produtoalterado">
-        </p>
-
-        <p>
-            <label>valor a alterar</label>
-            <select name="campoalterado">
+            <label>Filtrar por</label>
+            <select name="campobusca">
                 <option value="nomeproduto">Nome do produto</option>
+                <option value="id" selected>Id</option>
                 <option value="marcaproduto">Marca do produto</option>
                 <option value="valorproduto">Valordo produto</option>
                 <option value="quantidadeproduto">Quantidade</option>
             </select>
-        </p>
 
-        <p>
-            <label>Alterar para</label>
-            <input type="text" name="valoraalterar">
         </p>
         
+        <p>
+            <label>valor de busca</label>
+            <input type="text" name="valorbusca">
+        </p>
+
         <p>
             <button type="submit">Enviar</button> 
         </p>
@@ -68,5 +61,6 @@
         <a href="logout.php">Sair</a>
         <a href="painel.php">Voltar</a>
     </p>
+
 </body>
 </html>

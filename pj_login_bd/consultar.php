@@ -101,7 +101,7 @@
         </p>
 
         <p>
-            <button type="submit">Entrar</button> 
+            <button type="submit">Enviar</button> 
         </p>
     </form>
     <p>
