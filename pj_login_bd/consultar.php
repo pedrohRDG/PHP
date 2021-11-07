@@ -14,12 +14,12 @@
         $result = mysqli_query($mysqli, $query);
         echo "<table border>";
         echo "<tr>";
-        echo "<td>ID</td>";
-        echo "<td>Nome</td>";
-        echo "<td>Valor</td>";
-        echo "<td>Quantidade</td>";
-        echo "<td>Valor total</td>";
-        echo "<td>Marca</td>";
+        echo "<td> ID </td>";
+        echo "<td> Nome </td>";
+        echo "<td> Valor Unitario </td>";
+        echo "<td> Marca </td>";
+        echo "<td> Quantidade </td>";
+        echo "<td> Valor Total </td>";
         echo "</tr>"; 
             while($fetch = mysqli_fetch_row($result)){
                 echo "<tr>";
@@ -81,7 +81,7 @@
 </head>
 <body>
     <hr/>
-    <h1>Consultar produto</h1>    
+    <h1>Filtrar por</h1>    
     <form action="" method="POST">
         <p>
             <label>campo de busca</label>
@@ -106,6 +106,7 @@
     </form>
     <p>
         <a href="logout.php">Sair</a>
+        <a href="painel.php">Voltar</a>
     </p>
 </body>
 </html>
