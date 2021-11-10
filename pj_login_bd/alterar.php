@@ -7,29 +7,6 @@
     include('protect.php');
 
 
-    $consulta = "SELECT * FROM produtos";
-    $resultconsulta = mysqli_query($mysqli, $consulta);
-    echo "<table border>";
-    echo "<tr>";
-    echo "<td> ID </td>";
-    echo "<td> Nome </td>";
-    echo "<td> Valor Unitario </td>";
-    echo "<td> Marca </td>";
-    echo "<td> Quantidade </td>";
-    echo "<td> Valor Total </td>";
-    echo "</tr>"; 
-        while($fetch = mysqli_fetch_row($resultconsulta)){
-            echo "<tr>";
-            foreach ($fetch as $value) {
-                echo "<td>";   
-                echo $value;
-                echo "</td>";
-            }
-            echo "</tr>";
-        }
-        echo "</table>";
-
-
 
     if ( !isset( $_POST ) || empty( $_POST ) ) {
 
@@ -57,6 +34,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
     <title>Alterar</title>
 </head>
 <body>
@@ -67,7 +45,72 @@
             <a href="alterar.php"><button  class="botao">Alterar</button></a> 
             <a href="excluir.php"><button  class="botao">Excluir</button></a>  
     </nav>
+   
     <hr/>
+    
+    <?php
+    
+    if ( !isset( $_POST ) || empty( $_POST ) ) {
+
+        $query = "SELECT * FROM produtos";
+        $result = mysqli_query($mysqli, $query);
+        echo "<table border>";
+        echo "<tr>";
+        echo "<td> ID </td>";
+        echo "<td> Nome </td>";
+        echo "<td> Valor Unitario </td>";
+        echo "<td> Marca </td>";
+        echo "<td> Quantidade </td>";
+        echo "<td> Valor Total </td>";
+        echo "</tr>"; 
+            while($fetch = mysqli_fetch_row($result)){
+                echo "<tr>";
+                foreach ($fetch as $value) {
+                    echo "<td>";   
+                    echo $value;
+                    echo "</td>";
+                }
+                echo "</tr>";
+            }
+            echo "</table>";
+}
+
+    else{
+
+        $campobusca = $_POST['campobusca'];
+        $valorbusca = $_POST['valorbusca'];
+
+      
+
+        $query = "SELECT * FROM produtos WHERE $campobusca = '$valorbusca' ";
+        $result = mysqli_query($mysqli, $query);
+        echo "<table class=\"bordered striped centered\">";
+        echo "<tr>";
+        echo "<td>ID</td>";
+        echo "<td>Nome</td>";
+        echo "<td>Valor</td>";
+        echo "<td>Quantidade</td>";
+        echo "<td>Valor total</td>";
+        echo "<td>Marca</td>";
+        echo "</tr>";
+        while($fetch = mysqli_fetch_row($result)){
+            echo "<tr>";
+            foreach ($fetch as $value) {
+                echo "<td>"; 
+                echo $value;
+                echo "</td>"; 
+            }
+            echo "</tr>";     
+        }
+        
+        echo "</table>";
+
+
+} 
+
+    ?>
+
+
     <h1>Alterar</h1>    
     <form action="" method="POST">
         <p>

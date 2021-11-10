@@ -9,3 +9,31 @@ table {
   tr:nth-child(even) {
     background: lightgray;
   }
+
+  body{
+    margin: 20px;
+    text-align: center;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(124,124,124,1) 0%, rgba(61,61,61,1) 68%, rgba(0,0,0,1) 100%);
+}
+
+  .botao{
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(124,124,124,1) 0%, rgba(61,61,61,1) 68%, rgba(0,0,0,1) 100%);
+    border: 2px solid #000000;
+    color: #ffffff;
+    padding: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 12px 0 ;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #aaa;
+}
+
+
+.menu{
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 50px;
+    margin:  40px 40 ;
+}
