@@ -7,6 +7,27 @@
     include('protect.php');
 
 
+    $consulta = "SELECT * FROM produtos";
+    $resultconsulta = mysqli_query($mysqli, $consulta);
+    echo "<table border>";
+    echo "<tr>";
+    echo "<td> ID </td>";
+    echo "<td> Nome </td>";
+    echo "<td> Valor Unitario </td>";
+    echo "<td> Marca </td>";
+    echo "<td> Quantidade </td>";
+    echo "<td> Valor Total </td>";
+    echo "</tr>"; 
+        while($fetch = mysqli_fetch_row($resultconsulta)){
+            echo "<tr>";
+            foreach ($fetch as $value) {
+                echo "<td>";   
+                echo $value;
+                echo "</td>";
+            }
+            echo "</tr>";
+        }
+        echo "</table>";
 
     if ( !isset( $_POST ) || empty( $_POST ) ) {
 
