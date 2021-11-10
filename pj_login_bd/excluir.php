@@ -70,6 +70,7 @@
 
     ?>
 
+    </hr>
 
     <h1>Excluir</h1>    
     <form action="" method="POST">

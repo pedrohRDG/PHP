@@ -14,12 +14,12 @@ table {
     margin: 20px;
     text-align: center;
     background: rgb(255,255,255);
-    background: radial-gradient(circle, rgb(94, 169, 255) 0%, rgb(29, 103, 189) 0%, rgb(2, 63, 133) 68%, rgba(0,0,0,1) 100%);
+    background: radial-gradient(circle, rgb(120, 179, 247) 0%, rgb(29, 103, 189) 0%, rgb(2, 63, 133) 68%, rgba(0,0,0,1) 100%);
 }
 
   .botao{
     background: rgb(255,255,255);
-    background: rgb(126, 126, 126);
+    background: rgb(0, 90, 224);
     border: 2px solid #000000;
     color: #ffffff;
     padding: 3px;
