@@ -42,7 +42,7 @@
 
         $query = "SELECT * FROM produtos WHERE $campobusca = '$valorbusca' ";
         $result = mysqli_query($mysqli, $query);
-        echo "<table border>";
+        echo "<table class=\"bordered striped centered\">";
         echo "<tr>";
         echo "<td>ID</td>";
         echo "<td>Nome</td>";
