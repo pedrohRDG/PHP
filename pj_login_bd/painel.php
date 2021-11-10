@@ -10,26 +10,13 @@
     <title>Painel</title>
 </head>
 <body>
-<p>
-    <a href="inserir.php">Inserir</a>
-</p>
-
-<p>
-    <a href="consultar.php">Consultar</a>
-</p>
-
-<p>
-    <a href="alterar.php">Alterar</a>
-</p>
-
-<p>
-    <a href="excluir.php">Excluir</a>
-</p>
-
-<p>
-    <a href="logout.php">Sair</a>
-</p>
-
+    <nav class="menu">
+            <h1>Menu</h1>
+            <a href="inserir.php"><button  class="botao">Inserir</button></a>
+            <a href="consultar.php"><button  class="botao">Consultar</button></a>  
+            <a href="alterar.php"><button  class="botao">Alterar</button></a> 
+            <a href="excluir.php"><button  class="botao">Excluir</button></a>  
+    </nav>
 </body>
 </html>
 
