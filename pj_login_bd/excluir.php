@@ -97,7 +97,6 @@
     </form>
     <p>
         <a href="logout.php">Sair</a>
-        <a href="painel.php">Voltar</a>
     </p>
 
 </body>
