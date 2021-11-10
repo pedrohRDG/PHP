@@ -36,7 +36,7 @@
 
         $query = "SELECT * FROM produtos";
         $result = mysqli_query($mysqli, $query);
-        echo "<table border>";
+        echo "<table>";
         echo "<tr>";
         echo "<td> ID </td>";
         echo "<td> Nome </td>";
@@ -66,7 +66,7 @@
 
         $query = "SELECT * FROM produtos WHERE $campobusca = '$valorbusca' ";
         $result = mysqli_query($mysqli, $query);
-        echo "<table class=\"bordered striped centered\">";
+        echo "<table>   ";
         echo "<tr>";
         echo "<td>ID</td>";
         echo "<td>Nome</td>";

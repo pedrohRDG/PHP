@@ -50,11 +50,9 @@
     
     <?php
     
-    if ( !isset( $_POST ) || empty( $_POST ) ) {
-
         $query = "SELECT * FROM produtos";
         $result = mysqli_query($mysqli, $query);
-        echo "<table border>";
+        echo "<table>";
         echo "<tr>";
         echo "<td> ID </td>";
         echo "<td> Nome </td>";
@@ -73,40 +71,12 @@
                 echo "</tr>";
             }
             echo "</table>";
-}
-
-    else{
-
-        $campobusca = $_POST['campobusca'];
-        $valorbusca = $_POST['valorbusca'];
-
-      
-
-        $query = "SELECT * FROM produtos WHERE $campobusca = '$valorbusca' ";
-        $result = mysqli_query($mysqli, $query);
-        echo "<table class=\"bordered striped centered\">";
-        echo "<tr>";
-        echo "<td>ID</td>";
-        echo "<td>Nome</td>";
-        echo "<td>Valor</td>";
-        echo "<td>Quantidade</td>";
-        echo "<td>Valor total</td>";
-        echo "<td>Marca</td>";
-        echo "</tr>";
-        while($fetch = mysqli_fetch_row($result)){
-            echo "<tr>";
-            foreach ($fetch as $value) {
-                echo "<td>"; 
-                echo $value;
-                echo "</td>"; 
-            }
-            echo "</tr>";     
-        }
-        
-        echo "</table>";
 
 
-} 
+    
+
+
+ 
 
     ?>
 

@@ -14,19 +14,18 @@ table {
     margin: 20px;
     text-align: center;
     background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(124,124,124,1) 0%, rgba(61,61,61,1) 68%, rgba(0,0,0,1) 100%);
+    background: radial-gradient(circle, rgb(94, 169, 255) 0%, rgb(29, 103, 189) 0%, rgb(2, 63, 133) 68%, rgba(0,0,0,1) 100%);
 }
 
   .botao{
     background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(124,124,124,1) 0%, rgba(61,61,61,1) 68%, rgba(0,0,0,1) 100%);
+    background: rgb(126, 126, 126);
     border: 2px solid #000000;
     color: #ffffff;
-    padding: 5px;
+    padding: 3px;
     font-size: 25px;
     cursor: pointer;
-    margin: 12px 0 ;
-    border-radius: 10px;
+    margin: 18px 0 ;
     box-shadow: 3px 3px 3px #aaa;
 }
 
