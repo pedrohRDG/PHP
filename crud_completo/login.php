@@ -4,7 +4,7 @@
     <title>Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body> 
     <?php
@@ -39,14 +39,16 @@
                    // var_dump($_SESSION);
                 }else{
                     $_SESSION['MsgLogin'] = "Erro: Usuário ou senha inválidos!";
+
                 }
             }else{
                 $_SESSION['MsgLogin'] = "Erro: Usuário ou senha inválidos!";
+
             }
             
         }
         if(isset($_POST['registrar'])){
-            header('Location: cadastros/usuarios/cadastro.php');
+            header('Location: registrar.php');
         }else{
     ?>
     
