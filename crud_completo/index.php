@@ -5,7 +5,7 @@
     include "bibliotecas/conexao.php";
 
     if (!isset($_SESSION['UsuarioLogin'])){
-        //header('Location: login.php');
+        header('Location: login.php');
         
     }else{
 
