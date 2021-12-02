@@ -50,19 +50,19 @@
         }else{
     ?>
     
-    <form action="" class="login-box" method="post" >
+    <form action="" method="post" >
         <?php
             if (isset($_SESSION['MsgLogin'])){
-                echo '<h3 class="MsgErro">'.$_SESSION['MsgLogin'].'</h3>';
+                echo '<h3'.$_SESSION['MsgLogin'].'</h3>';
                 unset($_SESSION['MsgLogin']);
             }
         ?>
         <h1>Login</h1>
-        <section class="textbox">
+        <section >
             <input name="username" type="text" placeholder="Username" value="">
         </section>
 
-        <section class="textbox">
+        <section >
             <input name="password" type="password" placeholder="Password" value="">
         </section>
         
