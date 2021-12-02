@@ -9,4 +9,3 @@
     define('DB_USER','root');
     define('DB_SENHA','');
     define('DB_BASE','system');
-?>

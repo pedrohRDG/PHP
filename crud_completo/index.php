@@ -6,7 +6,6 @@
 
     if (!isset($_SESSION['UsuarioLogin'])){
         header('Location: login.php');
-        
     }else{
 
     if (!isset($_GET['offset'])){
